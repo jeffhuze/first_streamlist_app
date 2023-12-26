@@ -43,3 +43,8 @@ my_cur.execute("SELECT * FROM fruit_load_list")
 my_data_row = my_cur.fetchall()
 streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
+
+# allow the end user to add a fruit to the list
+# streamlit.header("What fruit would you like to add?")
+add_my_fruit = streamlit.text_input('What fruit would you like to add?')
+streamlit.write('Thanks for adding ', add_my_fruit)
